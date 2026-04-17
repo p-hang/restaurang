@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="bacground-title">
+            <img src="acess/Rectangle 33_edited.png" alt="background"
+                style="max-width: 100vw; display: block; height: auto;">
+            <h2 class="title">The Golden Plate</h2>
+        </div>
+
+        <!-- Search -->
+        <input type="text" placeholder="Sök..." class="search">
+
+        <!-- Guests -->
+        <div class="section">
+            <h4>Antalet gäster</h4>
+            <input type="range" min="1" max="100" value="10" id="guests">
+            <p id="guestValue">10 personer</p>
+        </div>
+
+        <!-- Type -->
+        <div class="section">
+            <h4>Typ av rätt</h4>
+            <div class="types">
+                <button class="tag active">Förrätt</button>
+                <button class="tag active">Huvudrätt</button>
+                <button class="tag">Efterrätt</button>
+                <button class="tag">Buffé</button>
+                <button class="tag">Snittar</button>
+                <button class="tag">Vickning</button>
+            </div>
+        </div>
+
+        <!-- Theme -->
+        <div class="section">
+            <h4>Tema</h4>
+            <div class="tags">
+                <button class="tag active">Italienskt</button>
+                <button class="tag">Mellanöstern</button>
+                <button class="tag">Skandinaviskt</button>
+                <button class="tag">Street food</button>
+                <button class="tag active">Närodlat</button>
+                <button class="tag">Mingelvänligt</button>
+                <button class="tag">Barbeque</button>
+                <button class="tag">Mexikanskt</button>
+                <button class="tag">Libanesiskt</button>
+                <button class="tag">Skadjur och fisk</button>
+                <button class="tag active">Spanskt active</button>
+                <button class="tag">Ekologiskt active</button>
+
+            </div>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="section">
+            <h4>Huvudingrediens</h4>
+            <div class="tags">
+                <button class="tag">Fågel</button>
+                <button class="tag">Kött</button>
+                <button class="tag">Fisk</button>
+                <button class="tag active">Grönt</button>
+            </div>
+        </div>
+
+        <!-- Specialkost/Kostpreferens -->
+        <div class="section">
+            <h4>Specialkost/Kostpreferens</h4>
+            <div class="tags">
+                <button class="tag">Glutenfri</button>
+                <button class="tag active">Laktosfri</button>
+                <button class="tag">Halal</button>
+                <button class="tag">Nöttallergi</button>
+                <button class="tag">Veganskt</button>
+                <button class="tag active">Vegetariskt</button>
+
+            </div>
+        </div>
+
+        <!-- Price -->
+        <div class="section">
+            <h4>Pris per person</h4>
+            <input type="range" min="0" max="600" value="200" id="price">
+            <p id="priceValue">$200</p>
+        </div>
+
+        <!-- Redskap -->
+        <div class="section">
+            <h4>Redskap</h4>
+            <div class="tags">
+                <button class="tag">Enbart färdiglagad mat</button>
+                <button class="tag active">Tillgång till kök</button>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <button class="search-btn">SÖK</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
