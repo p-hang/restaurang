@@ -10,25 +10,31 @@
 <body>
 
     <div class="container">
-        <div class="bacground-title">
+        <div class="background-title">
             <img src="acess/Rectangle 33_edited.png" alt="background"
                 style="max-width: 100vw; display: block; height: auto;">
             <h2 class="title">The Golden Plate</h2>
         </div>
 
         <!-- Search -->
-        <input type="text" placeholder="Sök..." class="search">
+        <input type="text" placeholder="Sök" class="search">
 
         <!-- Guests -->
         <div class="section">
-            <h4>Antalet gäster</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Antalet gäster</h4>
+            </header>
             <input type="range" min="1" max="150" value="10" id="guests">
             <p id="guestValue">10 personer</p>
         </div>
 
+        <div class="divider"></div>
+
         <!-- Type -->
         <div class="section">
-            <h4>Typ av rätt</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Typ av rätt</h4>
+            </header>
             <div class="types">
                 <button class="tag active">Förrätt</button>
                 <button class="tag active">Huvudrätt</button>
@@ -39,9 +45,13 @@
             </div>
         </div>
 
+        <div class="divider"></div>
+
         <!-- Theme -->
         <div class="section">
-            <h4>Tema</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Tema</h4>
+            </header>
             <div class="tags">
                 <button class="tag active">Italienskt</button>
                 <button class="tag">Mellanöstern</button>
@@ -59,9 +69,13 @@
             </div>
         </div>
 
+        <div class="divider"></div>
+
         <!-- Ingredients -->
         <div class="section">
-            <h4>Huvudingrediens</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Huvudingrediens</h4>
+            </header>
             <div class="tags">
                 <button class="tag">Fågel</button>
                 <button class="tag">Kött</button>
@@ -70,9 +84,13 @@
             </div>
         </div>
 
+        <div class="divider"></div>
+
         <!-- Specialkost/Kostpreferens -->
         <div class="section">
-            <h4>Specialkost/Kostpreferens</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Specialkost/Kostpreferens</h4>
+            </header>
             <div class="tags">
                 <button class="tag">Glutenfri</button>
                 <button class="tag active">Laktosfri</button>
@@ -84,16 +102,24 @@
             </div>
         </div>
 
+        <div class="divider"></div>
+
         <!-- Price -->
         <div class="section">
-            <h4>Pris per person</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Pris per person</h4>
+            </header>
             <input type="range" min="0" max="600" value="200" id="price">
             <p id="priceValue">$200</p>
         </div>
 
+        <div class="divider"></div>
+
         <!-- Redskap -->
         <div class="section">
-            <h4>Redskap</h4>
+            <header class="filter-header"><img src="acess/Polygon 3.png">
+                <h4>Redskap</h4>
+            </header>
             <div class="tags">
                 <button class="tag">Enbart färdiglagad mat</button>
                 <button class="tag active">Tillgång till kök</button>

@@ -122,6 +122,23 @@ body {
     margin-top: 10px;
 }
 
+.filter-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-header img {
+    width: 1em;
+    height: auto;
+    display: block;
+}
+
+.filter-header h4 {
+    margin: 0;
+}
+
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -145,6 +162,12 @@ body {
 
 h3 {
     margin-top: 20px;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgba(149, 149, 149, 1);
+    margin-bottom: 2rem;
 }
 
 .card {
