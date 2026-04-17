@@ -7,8 +7,10 @@ body {
     max-width: 600px;
     margin: auto;
     background: white;
+}
+
+.filter {
     padding: 20px;
-    border-radius: 10px;
 }
 
 .background-title {
@@ -36,9 +38,8 @@ body {
 .search {
     width: 100%;
     padding: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
     border: 1px solid #ccc;
 }
 
@@ -130,7 +131,7 @@ body {
 }
 
 .filter-header img {
-    width: 1em;
+    width: 0.75em;
     height: auto;
     display: block;
 }
