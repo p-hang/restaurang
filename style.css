@@ -92,6 +92,10 @@ body {
     border: none;
 }
 
+.section-content.hidden {
+    display: none;
+}
+
 .tag.active:not(.selected-tag)::after {
     content: "";
     width: 12px;

@@ -1,10 +1,12 @@
 document.querySelectorAll(".section").forEach(section => {
     const icon = section.querySelector(".toggle-icon");
-    const tagsContainer = section.querySelector(".tags");
+    const content = section.querySelector(".section-content");
     const selectedTagsContainer = section.querySelector(".selected-tags");
     const tags = section.querySelectorAll(".tag");
+    const slider = section.querySelector('input[type="range"]');
+    const valueText = section.querySelector("p");
 
-    if (!icon || !tagsContainer || !selectedTagsContainer) {
+    if (!icon || !content || !selectedTagsContainer) {
         return;
     }
 
@@ -12,23 +14,40 @@ document.querySelectorAll(".section").forEach(section => {
         tag.addEventListener("click", () => {
             tag.classList.toggle("active");
 
-            if (tagsContainer.classList.contains("hidden")) {
+            if (content.classList.contains("hidden") && selectedTagsContainer) {
                 updateSelectedTags(tags, selectedTagsContainer);
             }
         });
     });
 
     icon.addEventListener("click", () => {
-        const isClosing = !tagsContainer.classList.contains("hidden");
+        const isClosing = !content.classList.contains("hidden");
 
-        tagsContainer.classList.toggle("hidden");
+        content.classList.toggle("hidden");
         icon.classList.toggle("rotated");
 
+        if (!selectedTagsContainer) {
+            return;
+        }
+
         if (isClosing) {
-            updateSelectedTags(tags, selectedTagsContainer);
-            selectedTagsContainer.classList.add("show");
+            if (tags.length > 0) {
+                updateSelectedTags(tags, selectedTagsContainer);
+                selectedTagsContainer.classList.add("show");
+            } else if (slider && valueText) {
+                selectedTagsContainer.innerHTML = "";
+
+                const selectedValue = document.createElement("button");
+                selectedValue.className = "tag active selected-tag";
+                selectedValue.type = "button";
+                selectedValue.textContent = valueText.textContent;
+
+                selectedTagsContainer.appendChild(selectedValue);
+                selectedTagsContainer.classList.add("show");
+            }
         } else {
             selectedTagsContainer.classList.remove("show");
+        
         }
     });
 });
@@ -80,7 +99,7 @@ priceSlider.addEventListener("input", () => {
 
 // Search button
 document.querySelector(".search-btn").addEventListener("click", () => {
-    alert("Searching...");
+    window.location.href = "search-results.html";
 });
 
 
