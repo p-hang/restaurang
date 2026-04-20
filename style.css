@@ -250,9 +250,9 @@ h4 {
 .card p {
     font-style: italic;
     font-size: small;
-font-weight: 400;
-color:#4B4B4B;
-line-height: normal;
+    font-weight: 400;
+    color: #4B4B4B;
+    line-height: normal;
 }
 
 .card-body {
@@ -268,11 +268,11 @@ line-height: normal;
 .title-price h4 {
     margin: 0;
     color: #4B4B4B;
-font-family: "Inria Serif";
-font-size: 27.5px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    font-family: "Inria Serif";
+    font-size: 27.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .actions {
