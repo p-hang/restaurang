@@ -38,9 +38,29 @@ function updateSelectedTags(tags, container) {
 
     tags.forEach(tag => {
         if (tag.classList.contains("active")) {
+
             const selectedTag = document.createElement("button");
-            selectedTag.className = "tag active";
-            selectedTag.textContent = tag.textContent + " ×";
+            selectedTag.className = "tag active selected-tag";
+
+            // text
+            const text = document.createElement("span");
+            text.textContent = tag.textContent;
+
+            // icon
+            const icon = document.createElement("img");
+            icon.src = "acess/Icon-close.png";
+            icon.alt = "remove";
+            icon.classList.add("close-icon");
+
+            icon.addEventListener("click", (e) => {
+                e.stopPropagation();
+                tag.classList.remove("active");
+                updateSelectedTags(tags, container);
+            });
+
+            selectedTag.appendChild(text);
+            selectedTag.appendChild(icon);
+
             container.appendChild(selectedTag);
         }
     });
