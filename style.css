@@ -267,6 +267,12 @@ line-height: normal;
 
 .title-price h4 {
     margin: 0;
+    color: #4B4B4B;
+font-family: "Inria Serif";
+font-size: 27.5px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
 .actions {
