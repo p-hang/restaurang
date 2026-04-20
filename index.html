@@ -19,121 +19,133 @@
 
         <div class="filter">
 
-        <!-- Search -->
-        <input type="text" placeholder="Sök" class="search">
+            <!-- Search -->
+            <input type="text" placeholder="Sök" class="search">
 
-        <!-- Guests -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Antalet gäster</h4>
-            </header>
-            <input type="range" min="1" max="150" value="10" id="guests">
-            <p id="guestValue">10 personer</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- Type -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Typ av rätt</h4>
-            </header>
-            <div class="tags">
-                <button class="tag active">Förrätt</button>
-                <button class="tag active">Huvudrätt</button>
-                <button class="tag">Efterrätt</button>
-                <button class="tag">Buffé</button>
-                <button class="tag">Snittar</button>
-                <button class="tag">Vickning</button>
+            <!-- Guests -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Antalet gäster</h4>
+                </header>
+                <input type="range" min="1" max="150" value="10" id="guests">
+                <p id="guestValue">10 personer</p>
             </div>
-        </div>
 
-        <div class="divider"></div>
+            <div class="divider"></div>
 
-        <!-- Theme -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Tema</h4>
-            </header>
-            <div class="tags">
-                <button class="tag active">Italienskt</button>
-                <button class="tag">Mellanöstern</button>
-                <button class="tag">Skandinaviskt</button>
-                <button class="tag">Street food</button>
-                <button class="tag active">Närodlat</button>
-                <button class="tag">Mingelvänligt</button>
-                <button class="tag">Barbeque</button>
-                <button class="tag">Mexikanskt</button>
-                <button class="tag">Libanesiskt</button>
-                <button class="tag">Skadjur och fisk</button>
-                <button class="tag active">Spanskt active</button>
-                <button class="tag">Ekologiskt active</button>
-
+            <!-- Type -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Typ av rätt</h4>
+                </header>
+                <div class="tags">
+                    <button class="tag active">Förrätt</button>
+                    <button class="tag active">Huvudrätt</button>
+                    <button class="tag">Efterrätt</button>
+                    <button class="tag">Buffé</button>
+                    <button class="tag">Snittar</button>
+                    <button class="tag">Vickning</button>
+                </div>
+                     <div class="selected-tags"></div>
             </div>
-        </div>
 
-        <div class="divider"></div>
+            <div class="divider"></div>
 
-        <!-- Ingredients -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Huvudingrediens</h4>
-            </header>
-            <div class="tags">
-                <button class="tag">Fågel</button>
-                <button class="tag">Kött</button>
-                <button class="tag">Fisk</button>
-                <button class="tag active">Grönt</button>
+            <!-- Theme -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Tema</h4>
+                </header>
+                <div class="tags">
+                    <button class="tag active">Italienskt</button>
+                    <button class="tag">Mellanöstern</button>
+                    <button class="tag">Skandinaviskt</button>
+                    <button class="tag">Street food</button>
+                    <button class="tag active">Närodlat</button>
+                    <button class="tag">Mingelvänligt</button>
+                    <button class="tag">Barbeque</button>
+                    <button class="tag">Mexikanskt</button>
+                    <button class="tag">Libanesiskt</button>
+                    <button class="tag">Skadjur och fisk</button>
+                    <button class="tag active">Spanskt active</button>
+                    <button class="tag">Ekologiskt active</button>
+
+                </div>
+
+                     <div class="selected-tags"></div>
             </div>
-        </div>
 
-        <div class="divider"></div>
+            <div class="divider"></div>
 
-        <!-- Specialkost/Kostpreferens -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Specialkost/Kostpreferens</h4>
-            </header>
-            <div class="tags">
-                <button class="tag">Glutenfri</button>
-                <button class="tag active">Laktosfri</button>
-                <button class="tag">Halal</button>
-                <button class="tag">Nöttallergi</button>
-                <button class="tag">Veganskt</button>
-                <button class="tag active">Vegetariskt</button>
+            <!-- Ingredients -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Huvudingrediens</h4>
+                </header>
+                <div class="tags">
+                    <button class="tag">Fågel</button>
+                    <button class="tag">Kött</button>
+                    <button class="tag">Fisk</button>
+                    <button class="tag active">Grönt</button>
+                </div>
+
+                <div class="selected-tags"></div>
 
             </div>
-        </div>
 
-        <div class="divider"></div>
+            <div class="divider"></div>
 
-        <!-- Price -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Pris per person</h4>
-            </header>
-            <input type="range" min="0" max="600" value="200" id="price">
-            <p id="priceValue">$200</p>
-        </div>
+            <!-- Specialkost/Kostpreferens -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Specialkost/Kostpreferens</h4>
+                </header>
+                <div class="tags">
+                    <button class="tag">Glutenfri</button>
+                    <button class="tag active">Laktosfri</button>
+                    <button class="tag">Halal</button>
+                    <button class="tag">Nöttallergi</button>
+                    <button class="tag">Veganskt</button>
+                    <button class="tag active">Vegetariskt</button>
+                </div>
 
-        <div class="divider"></div>
+                <div class="selected-tags"></div>
 
-        <!-- Redskap -->
-        <div class="section">
-            <header class="filter-header"><img src="acess/Polygon 3.png">
-                <h4>Redskap</h4>
-            </header>
-            <div class="tags">
-                <button class="tag">Enbart färdiglagad mat</button>
-                <button class="tag active">Tillgång till kök</button>
             </div>
-        </div>
 
-        <!-- Button -->
-        <div class="search-ftn">
-            <button class="search-btn">SÖK</button>
+            <div class="divider"></div>
+
+            <!-- Price -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Pris per person</h4>
+                </header>
+                <input type="range" min="0" max="600" value="200" id="price">
+                <p id="priceValue">$200</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Redskap -->
+            <div class="section">
+                <header class="filter-header"><img src="acess/Polygon 3.png" class="toggle-icon" alt="">
+                    <h4>Redskap</h4>
+                </header>
+                <div class="tags">
+                    <button class="tag">Enbart färdiglagad mat</button>
+                    <button class="tag active">Tillgång till kök</button>
+                </div>
+
+                <div class="selected-tags"></div>
+
+            </div>
+
+            <!-- Button -->
+        
         </div>
-        </div>
+            <div class="search-fnt">
+                <button class="search-btn">SÖK</button>
+            </div>
     </div>
 
     <script src="script.js"></script>
