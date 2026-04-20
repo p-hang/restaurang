@@ -65,7 +65,7 @@ function updateSelectedTags(tags, container) {
             text.textContent = originalTag.textContent;
 
             const icon = document.createElement("img");
-            icon.src = "acess/Icon-close.png";
+            icon.src = "assets/Icon-close.png";
             icon.alt = "remove";
             icon.classList.add("close-icon");
 
