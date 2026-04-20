@@ -4,7 +4,7 @@ document.querySelectorAll(".section").forEach(section => {
     const selectedTagsContainer = section.querySelector(".selected-tags");
     const tags = section.querySelectorAll(".tag");
     const slider = section.querySelector('input[type="range"]');
-    const valueText = section.querySelector("p");
+    const valueText = section.querySelector(".slider-value");
 
     if (!icon || !content || !selectedTagsContainer) {
         return;
@@ -14,7 +14,7 @@ document.querySelectorAll(".section").forEach(section => {
         tag.addEventListener("click", () => {
             tag.classList.toggle("active");
 
-            if (content.classList.contains("hidden") && selectedTagsContainer) {
+            if (content.classList.contains("hidden")) {
                 updateSelectedTags(tags, selectedTagsContainer);
             }
         });
@@ -25,10 +25,6 @@ document.querySelectorAll(".section").forEach(section => {
 
         content.classList.toggle("hidden");
         icon.classList.toggle("rotated");
-
-        if (!selectedTagsContainer) {
-            return;
-        }
 
         if (isClosing) {
             if (tags.length > 0) {
@@ -47,7 +43,7 @@ document.querySelectorAll(".section").forEach(section => {
             }
         } else {
             selectedTagsContainer.classList.remove("show");
-        
+            selectedTagsContainer.innerHTML = "";
         }
     });
 });
@@ -55,14 +51,14 @@ document.querySelectorAll(".section").forEach(section => {
 function updateSelectedTags(tags, container) {
     container.innerHTML = "";
 
-    tags.forEach(tag => {
-        if (tag.classList.contains("active")) {
+    tags.forEach(originalTag => {
+        if (originalTag.classList.contains("active")) {
             const selectedTag = document.createElement("button");
             selectedTag.className = "tag active selected-tag";
             selectedTag.type = "button";
 
             const text = document.createElement("span");
-            text.textContent = tag.textContent;
+            text.textContent = originalTag.textContent;
 
             const icon = document.createElement("img");
             icon.src = "acess/Icon-close.png";
@@ -73,7 +69,7 @@ function updateSelectedTags(tags, container) {
             selectedTag.appendChild(icon);
 
             selectedTag.addEventListener("click", () => {
-                tag.classList.remove("active");
+                originalTag.classList.remove("active");
                 updateSelectedTags(tags, container);
             });
 
@@ -85,29 +81,37 @@ function updateSelectedTags(tags, container) {
 const guestSlider = document.getElementById("guests");
 const guestValue = document.getElementById("guestValue");
 
-guestSlider.addEventListener("input", () => {
-    guestValue.textContent = guestSlider.value + " personer";
-});
-
+if (guestSlider && guestValue) {
+    guestSlider.addEventListener("input", () => {
+        guestValue.textContent = guestSlider.value + " personer";
+    });
+}
 // Price slider
 const priceSlider = document.getElementById("price");
 const priceValue = document.getElementById("priceValue");
 
-priceSlider.addEventListener("input", () => {
-    priceValue.textContent = "$" + priceSlider.value;
-});
+if (priceSlider && priceValue) {
+    priceSlider.addEventListener("input", () => {
+        priceValue.textContent = "$" + priceSlider.value;
+    });
+}
 
 // Search button
-document.querySelector(".search-btn").addEventListener("click", () => {
-    window.location.href = "search-results.html";
-});
+const searchBtn = document.querySelector(".search-btn");
+if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+        window.location.href = "search-results.html";
+    });
+}
 
 
-/*Search result*/
+// FILTER PAGE (index)
+// SEARCH RESULTS PAGE
 
 // Button actions
 document.querySelectorAll(".actions button").forEach(btn => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
         alert("Clicked!");
     });
 });
