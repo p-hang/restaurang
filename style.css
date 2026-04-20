@@ -247,6 +247,14 @@ h4 {
     object-fit: cover;
 }
 
+.card p {
+    font-style: italic;
+    font-size: small;
+font-weight: 400;
+color:#4B4B4B;
+line-height: normal;
+}
+
 .card-body {
     padding: 10px;
 }
