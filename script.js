@@ -179,7 +179,8 @@ document.querySelectorAll(".info-btn").forEach(button => {
                 <div class="extra-info-content">
                     <div class="ingredients-column">
                         <ul>
-                            <li>baby spinach</li>
+                            <li><b>baby spinach</b></li>
+                            <br>
                             <li>olive oil</li>
                             <li>onions</li>
                             <li>garlic</li>
