@@ -96,16 +96,60 @@ const priceValue = document.getElementById("priceValue");
 
 if (priceSlider && priceValue) {
     priceSlider.addEventListener("input", () => {
-        priceValue.textContent = "$" + priceSlider.value;
+        priceValue.textContent = "€" + priceSlider.value;
     });
 }
 
 // Search button
-const searchBtn = document.querySelector(".search-btn");
-if (searchBtn) {
-    searchBtn.addEventListener("click", () => {
-        window.location.href = "search-results.html";
+function filterUI() {
+    document.querySelectorAll(".section").forEach(section => {
+        const tags = section.querySelectorAll(".tag");
+
+        tags.forEach(tag => {
+            if (!tag.classList.contains("active")) {
+                tag.style.display = "none";
+            }
+        });
     });
+}
+
+let hasSearched = false;
+const searchBtn = document.querySelector(".search-btn");
+
+searchBtn.addEventListener("click", () => {
+    if (!hasSearched) {
+        hasSearched = true;
+
+        saveFilters();
+        filterUI();
+
+        searchBtn.textContent = "SÖK";
+    } else {
+        window.location.href = "search-results.html";
+    }
+});
+
+
+function saveFilters() {
+    const filters = {};
+
+    document.querySelectorAll(".section").forEach(section => {
+        const title = section.querySelector("h4")?.textContent;
+        const activeTags = [];
+
+        section.querySelectorAll(".tag.active").forEach(tag => {
+            activeTags.push(tag.textContent.trim());
+        });
+
+        const slider = section.querySelector('input[type="range"]');
+        if (slider) {
+            filters[title] = slider.value;
+        } else {
+            filters[title] = activeTags;
+        }
+    });
+
+    localStorage.setItem("filters", JSON.stringify(filters));
 }
 
 
