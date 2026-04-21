@@ -19,6 +19,7 @@ body {
     gap: 1.5rem;
     padding: 0.5rem 16px 0.5rem 0;
     margin-right: 10rem;
+    margin-left: 1rem;
 }
 
 .back-icon {
@@ -370,9 +371,8 @@ h4 {
 
 .extra-info {
     margin-top: 10px;
-    background: #f5efe3;
-    border: 1px solid #e2d7c8;
-    border-radius: 4px;
+    background: rgba(255, 253, 240, 1);
+
     padding: 14px 18px;
     font-size: 0.9rem;
     color: #333;
