@@ -116,19 +116,20 @@ function filterUI() {
 let hasSearched = false;
 const searchBtn = document.querySelector(".search-btn");
 
-searchBtn.addEventListener("click", () => {
-    if (!hasSearched) {
-        hasSearched = true;
+if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+        if (!hasSearched) {
+            hasSearched = true;
 
-        saveFilters();
-        filterUI();
+            saveFilters();
+            filterUI();
 
-        searchBtn.textContent = "SÖK";
-    } else {
-        window.location.href = "search-results.html";
-    }
-});
-
+            searchBtn.textContent = "SÖK";
+        } else {
+            window.location.href = "search-results.html";
+        }
+    });
+}
 
 function saveFilters() {
     const filters = {};
