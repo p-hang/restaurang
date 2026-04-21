@@ -158,24 +158,19 @@ function saveFilters() {
 // SEARCH RESULTS PAGE
 // =======================
 
-// Button actions
-document.querySelectorAll(".actions button").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        alert("Clicked!");
-    });
-});
-
-// Ta bort filter-tags när man klickar
-document.querySelectorAll(".tag2").forEach(tag => {
+// Delete filter when clicked
+document.querySelectorAll(".tag").forEach(tag => {
     tag.addEventListener("click", () => {
         tag.remove();
     });
 });
 
-// Expandera / stäng receptkort
-document.querySelectorAll(".card").forEach(card => {
-    card.addEventListener("click", () => {
+// Expande/close recepies
+document.querySelectorAll(".info-btn").forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const card = button.closest(".card");
         const existing = card.querySelector(".extra-info");
 
         if (existing) {
@@ -209,7 +204,8 @@ document.querySelectorAll(".card").forEach(card => {
                 </div>
             `;
 
-            card.querySelector(".card-body").appendChild(extra);
+            const actions = card.querySelector(".actions");
+            actions.before(extra);
         }
     });
 });

@@ -324,20 +324,36 @@ h4 {
 
 .actions {
     display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
+    align-items: center;
     background-color: #80B392;
-    padding: 5px;
+    padding: 6px;
     border-radius: 8px;
+    gap: 6px;
 }
 
+/* alla knappar */
 .actions button {
-    border: none;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 8px;
-    cursor: pointer;
     background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    cursor: pointer;
+}
+
+/* sista (höger) */
+.info-btn {
+    margin-left: auto;              /* tryck höger */
+    background-color: #e6e6e6;      /* ljus platta */
+    padding: 6px;                  /* ger “ruta runt ikon” */
+    border-radius: 6px;
+}
+
+/* bilder */
+.actions img {
+    height: 25px;
+    width: auto;
 }
 
 
