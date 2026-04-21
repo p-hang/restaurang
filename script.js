@@ -155,9 +155,9 @@ function saveFilters() {
 // =======================
 
 // Delete filter when clicked
-document.querySelectorAll(".tag").forEach(tag => {
-    tag.addEventListener("click", () => {
-        tag.remove();
+document.querySelectorAll(".tag2").forEach(tag2 => {
+    tag2.addEventListener("click", () => {
+        tag2.remove();
     });
 });
 
