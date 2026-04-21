@@ -262,7 +262,7 @@ h4 {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 15px;
-    cursor: pointer;
+    
 }
 
 .card img {
@@ -338,7 +338,6 @@ h4 {
     align-items: center;
     justify-content: center;
     padding: 4px;
-    cursor: pointer;
 }
 
 .info-btn {
@@ -346,6 +345,7 @@ h4 {
     background-color: #e6e6e6;
     padding: 6px;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .actions img {
