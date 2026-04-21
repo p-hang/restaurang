@@ -2,6 +2,7 @@
 // FILTER PAGE (index)
 // =======================
 
+//deals with togle and selected filters
 document.querySelectorAll(".section").forEach(section => {
     const icon = section.querySelector(".toggle-icon");
     const content = section.querySelector(".section-content");
@@ -52,6 +53,7 @@ document.querySelectorAll(".section").forEach(section => {
     });
 });
 
+//creates copies of active tags
 function updateSelectedTags(tags, container) {
     container.innerHTML = "";
 
@@ -81,6 +83,7 @@ function updateSelectedTags(tags, container) {
         }
     });
 }
+
 // Guests slider
 const guestSlider = document.getElementById("guests");
 const guestValue = document.getElementById("guestValue");
@@ -113,24 +116,17 @@ function filterUI() {
     });
 }
 
-let hasSearched = false;
+//saves filters and sends you to next page
 const searchBtn = document.querySelector(".search-btn");
 
 if (searchBtn) {
     searchBtn.addEventListener("click", () => {
-        if (!hasSearched) {
-            hasSearched = true;
-
-            saveFilters();
-            filterUI();
-
-            searchBtn.textContent = "SÖK";
-        } else {
-            window.location.href = "search-results.html";
-        }
+        saveFilters();
+        window.location.href = "search-results.html";
     });
 }
 
+//stores filters
 function saveFilters() {
     const filters = {};
 
