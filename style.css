@@ -331,7 +331,6 @@ h4 {
     gap: 6px;
 }
 
-/* alla knappar */
 .actions button {
     background: transparent;
     border: none;
@@ -342,20 +341,17 @@ h4 {
     cursor: pointer;
 }
 
-/* sista (höger) */
 .info-btn {
-    margin-left: auto;              /* tryck höger */
-    background-color: #e6e6e6;      /* ljus platta */
-    padding: 6px;                  /* ger “ruta runt ikon” */
+    margin-left: auto;
+    background-color: #e6e6e6;
+    padding: 6px;
     border-radius: 6px;
 }
 
-/* bilder */
 .actions img {
     height: 25px;
     width: auto;
 }
-
 
 .extra-info {
     margin-top: 10px;
